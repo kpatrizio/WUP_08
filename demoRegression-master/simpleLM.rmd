@@ -48,4 +48,5 @@ summary.lm(hlen)
 ```
 
 Conclusion...
-we were able to find a better fit to predict the length of a bear by using the variable HEADLEN, and comparing the adjusted Rsquare value of 0.8434 which is bigger than the original Rsquare value which was 0.7476.
+we were able to find a better fit to predict the length of a bear by using the variable HEADLEN, and comparing the adjusted R-square value of 0.8434 which is bigger than the original R-square value which was 0.7476.
+
