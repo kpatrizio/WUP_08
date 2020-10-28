@@ -1,7 +1,7 @@
 ---
 title: "simpleRegress"
-author: "put your name here"
-date: "Fall 2020"
+author: "Kelly Patrizio"
+date: "October 27, 2020"
 output: html_document
 ---
 
@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 bears <- read.csv(file="BEARS.csv",header = TRUE)
 ```
+
 
 ## Model LENGTH ~ NECK  this is an example  
 
@@ -34,3 +35,17 @@ predict(simp,new,se.fit=TRUE)
 ```
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
 
+```{r}
+pairs(bears)
+```
+
+
+```{r}
+hlen <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(hlen)
+summary.lm(hlen)
+```
+
+Conclusion...
+we were able to find a better fit to predict the length of a bear by using the variable HEADLEN, and comparing the adjusted Rsquare value of 0.8434 which is bigger than the original Rsquare value which was 0.7476.
